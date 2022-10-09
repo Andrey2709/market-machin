@@ -5,8 +5,9 @@
     <title>Menu details</title>
 </head>
 <body>
-<div th:each="p:${detail}">
-    <span  th:text ="${'ID: '+ p.id + ' Name: ' + p.title + ' Cost: '+ p.cost}"/>
+<div th:each="p:${product}">
+      <span  th:text ="${'ID: '+ p.id + ' Name: ' + p.title + ' Cost: '+ p.cost}"/>
+
 </div>
 </body>
 </html>
