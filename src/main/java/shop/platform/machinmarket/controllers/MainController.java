@@ -16,17 +16,17 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MainController {
     @Autowired
-    private Repo repo;
+    private Repo repository;
 
 
     @GetMapping("/product/all")
     public ArrayList<Product> menu() {
-              return  repo.getProducts();
+              return  repository.getProducts();
     }
 
     @GetMapping("/product/delete{id}")
     public void del(Integer id) {
-        repo.delete(id);
+        repository.delete(id);
     }
 
 }
