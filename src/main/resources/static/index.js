@@ -12,6 +12,5 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
     .then(function(response)){
     $scope.loadProducts();
     }
-    } ;
-&scope.loadProducts
+    };
 });

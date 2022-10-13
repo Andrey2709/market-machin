@@ -28,12 +28,12 @@ public class Repo {
 
     public void init() {
         products = new ArrayList<>(Arrays.asList(
-                new Product(1, "Wheel", 5000.0),
-                new Product(2, "Brake pads", 3200.0),
-                new Product(3, "Engine", 115000.0),
-                new Product(4, "Rear view mirror", 300.0),
-                new Product(5, "Engine oil", 700.0),
-                new Product(6, "Air filter", 300.0)
+                new Product(1, "Wheel", 5000),
+                new Product(2, "Brake pads", 3200),
+                new Product(3, "Engine", 115000),
+                new Product(4, "Rear view mirror", 300),
+                new Product(5, "Engine oil", 700),
+                new Product(6, "Air filter", 300)
         ));
 
     }

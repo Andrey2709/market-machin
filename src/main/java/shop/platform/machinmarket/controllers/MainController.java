@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import shop.platform.machinmarket.data.ProductDao;
 import shop.platform.machinmarket.prod.Product;
 import shop.platform.machinmarket.repo.Repo;
 import shop.platform.machinmarket.servise.ShopServise;
@@ -18,15 +19,18 @@ public class MainController {
     @Autowired
     private Repo repository;
 
+    private ProductDao dao;
+
 
     @GetMapping("/product/all")
-    public ArrayList<Product> menu() {
-              return  repository.getProducts();
+    public List<Product> menu() {
+              return  dao.findAll();
     }
 
     @GetMapping("/product/delete{id}")
     public void del(Integer id) {
         repository.delete(id);
     }
+
 
 }

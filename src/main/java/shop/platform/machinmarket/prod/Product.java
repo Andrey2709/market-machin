@@ -1,23 +1,31 @@
 package shop.platform.machinmarket.prod;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Data
+@Entity
 //@AllArgsConstructor
 //@NoArgsConstructor
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     int id;
+    @Column(name = "title")
     String title;
-    double cost;
+    @Column(name = "price")
+    int price;
 
 
-    public Product(int id, String title, double cost) {
+    public Product(int id, String title, int price) {
         this.id = id;
         this.title = title;
-        this.cost = cost;
+        this.price = price;
     }
+
     public Product() {
     }
 
@@ -38,13 +46,16 @@ public class Product {
         this.title = title;
     }
 
-    public double getCost() {
-        return cost;
+    public double getPrice() {
+        return price;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-
+    @Override
+    public String toString() {
+        return "id=" + id +", Надвание ='" + title + '\'' + ", Цена =" + price;
+    }
 }
