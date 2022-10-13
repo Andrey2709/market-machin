@@ -1,26 +1,19 @@
 package shop.platform.machinmarket.servise;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import shop.platform.machinmarket.prod.Product;
 import shop.platform.machinmarket.repo.Repo;
 
-import java.util.ArrayList;
-
 @Service
-@RequiredArgsConstructor
 public class ShopServise {
-
-    public final Repo repository;
-
-    public Product getProduct(int id){
-        return repository.getById(id);
-    }
-
-    public ArrayList<Product> all(){
-        return repository.getProducts();
-    }
+@Autowired
+    private   Repo repository;
 
 
+   public void changeCostProduct(Integer id , int cost){
+       Product p = repository.getById(id);
+       p.setPrice(cost);
+   }
 
 }
