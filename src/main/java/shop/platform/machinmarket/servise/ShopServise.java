@@ -2,7 +2,7 @@ package shop.platform.machinmarket.servise;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import shop.platform.machinmarket.prod.Product;
+import shop.platform.machinmarket.data_products.Product;
 import shop.platform.machinmarket.repo.Repo;
 
 @Service

@@ -1,18 +1,14 @@
-package shop.platform.machinmarket.data;
+package shop.platform.machinmarket.data_products;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import shop.platform.machinmarket.prod.Product;
 
-import javax.annotation.PostConstruct;
-import javax.security.auth.login.Configuration;
-import java.util.List;
+import java.util.ArrayList;
+
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import shop.platform.machinmarket.data_clients.Client;
+
 @Component
-public class ProductDao implements  ProdDao{
+public class ProductDao {
 
 
 
@@ -33,10 +29,10 @@ public ProductDao(SFUtil util) {
 
 
 
-    public List<Product> findAll(){
+    public ArrayList<Product> findAll(){
         try(Session session = util.getSession()){
             session.getTransaction();
-            List<Product> list = session.createQuery("SELECT p FROM Product p").getResultList();
+            ArrayList<Product> list = (ArrayList<Product>) session.createQuery("SELECT p FROM Product p").getResultList();
             session.getTransaction().commit();
             return list;
 

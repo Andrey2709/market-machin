@@ -1,8 +1,7 @@
-package shop.platform.machinmarket.data;
+package shop.platform.machinmarket.data_products;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class SFUtil {

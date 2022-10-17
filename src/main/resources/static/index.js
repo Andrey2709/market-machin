@@ -9,8 +9,8 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
        };
     $scope.delProduct = function(prodId){
     $http.get(contextPath+'/product/delete'+ prodId)
-    .then(function(response)){
+    .then(function(response){
     $scope.loadProducts();
-    }
+    });
     };
 });
