@@ -1,12 +1,7 @@
 package shop.platform.machinmarket.repo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import shop.platform.machinmarket.prod.Product;
+import shop.platform.machinmarket.data_products.Product;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -16,7 +11,7 @@ import java.util.List;
 
 @Component
 public class Repo {
-    private ArrayList<Product> products;
+    private List<Product> products;
 
 //    public Repo(ArrayList<Product> products) {
 //        this.products = products;
@@ -25,7 +20,6 @@ public class Repo {
 
 
     @PostConstruct
-
     public void init() {
         products = new ArrayList<>(Arrays.asList(
                 new Product(1, "Wheel", 5000),
@@ -45,8 +39,8 @@ public class Repo {
     }
 
 
-    public ArrayList<Product> getProducts() {
-        return products;
+    public List<Product> getProducts() {
+        return Collections.unmodifiableList(products);
     }
 
 

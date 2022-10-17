@@ -1,4 +1,4 @@
-package shop.platform.machinmarket.prod;
+package shop.platform.machinmarket.data_products;
 
 import lombok.Data;
 
