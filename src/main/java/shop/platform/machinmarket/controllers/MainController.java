@@ -1,6 +1,7 @@
 package shop.platform.machinmarket.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import shop.platform.machinmarket.data_products.ProductDao;
 import shop.platform.machinmarket.data_products.Product;
@@ -8,7 +9,7 @@ import shop.platform.machinmarket.repo.Repo;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class MainController {
     @Autowired
     private Repo repository;

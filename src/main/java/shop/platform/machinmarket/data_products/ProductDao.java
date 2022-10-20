@@ -18,7 +18,7 @@ public ProductDao(SFUtil util) {
         this.util = util;
     }
 
-    public Product findById(Long id){
+    public Product findById(int id){
         try (Session session = util.getSession()){
             session.beginTransaction();
             Product p = session.get(Product.class, id);
@@ -39,7 +39,7 @@ public ProductDao(SFUtil util) {
         }
     }
 
-    public void deletById(Long id){
+    public void deletById(int id){
        try (Session session = util.getSession()){
            session.getTransaction();
            Product p = session.get(Product.class , id);
