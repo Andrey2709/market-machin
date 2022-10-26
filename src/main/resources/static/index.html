@@ -22,10 +22,10 @@
                 <td>Цена</td>
             </tr>
             <tbody>
-            <tr ng-repeat="s in products">
-                <td>{{s.id}}</td>
-                <td>{{s.title}}</td>
-                <td>{{s.price}}</td>
+            <tr ng-repeat="p in loadProducts">
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.price}}</td>
                 <td>
                    <button class=" btn btn-danger" ng-click="delete(s.id)">Delete</button>
                 </td>
