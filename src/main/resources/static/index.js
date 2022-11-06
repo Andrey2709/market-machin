@@ -5,7 +5,7 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
            $http.get(contextPath + '/product/all')
                .then(function (response) {
                console.log(response.data)
-                   $scope.products = response.data;
+                   $scope.product = response.data;
                });
        };
     $scope.delProduct = function(prodId){
