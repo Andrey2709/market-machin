@@ -1,10 +1,12 @@
 package shop.platform.machinmarket.data_products;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+@Component
 public class ProductDto {
 
     int id;
